@@ -2,100 +2,23 @@
 
   <!-- Cabecero centrado -->
   <!-- Componente: Cabecero -->
-  <div class="row justify-content-center">
-    <div class="p-4 rounded border border-primary text-center">
-      <h4 class="mb-3">Presupuesto Disponible:</h4>
-      <div class="display-3 fw-bold text-warning">$3,400.00</div>
-      <div class="row mt-4 justify-content-center">
-        <div class="col-md-5 text-center">
-          <div class="text-uppercase">INGRESOS</div>
-          <div class="text-success h5">$4,500.00</div>
-        </div>
-        <div class="col-md-5 text-center">
-          <div class="text-uppercase">EGRESOS</div>
-          <div class="text-danger h5">
-            $1,100.00
-            <span class="badge bg-success ms-2">24%</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-cabecero />
 
   <!-- Formulario centrado -->
   <!-- Componente: Formulario -->
-  <div class="row justify-content-center mt-4">
-    <div class="col-md-8">
-      <form class="row g-2">
-        <div class="col-auto">
-          <select class="form-select bg-success">
-            <option value="ingresoOperacion" selected>+</option>
-            <option value="egresoOperacion">-</option>
-          </select>
-        </div>
-        <div class="col">
-          <input type="text" class="form-control border-success" placeholder="Descripción" required />
-        </div>
-        <div class="col-auto">
-          <input type="number" class="form-control border-success" placeholder="Valor" required />
-        </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-success">
-            <i class="bi bi-check-circle"></i> <!-- Bootstrap Icon -->
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
+  <app-formulario />
 
   <!-- Ingresos y Egresos en columnas de igual tamaño -->
   <div class="row mt-4">
     <!-- Componente: Ingresos -->
     <div class="col-md-6">
-      <h2 class="text-center text-primary">Ingresos</h2>
-      <ul class="list-group mt-3">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span class="flex-grow-1">Salario</span>
-          <span class="text-success mx-3">$4,000.00</span>
-          <button class="btn btn-sm btn-danger">
-            <i class="bi bi-x-circle"></i> <!-- Bootstrap Icon -->
-          </button>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span class="flex-grow-1">Venta Coche</span>
-          <span class="text-success mx-3">$500.00</span>
-          <button class="btn btn-sm btn-danger">
-            <i class="bi bi-x-circle"></i> <!-- Bootstrap Icon -->
-          </button>
-        </li>
-      </ul>
+      <app-ingreso />
     </div>
+
 
     <!-- Componente: Egresos -->
     <div class="col-md-6">
-      <h2 class="text-center text-danger">Egresos</h2>
-      <ul class="list-group mt-3">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span class="flex-grow-1">Renta Depto</span>
-          <span class="d-flex align-items-center mx-3">
-            <span class="text-danger">- $900.00</span>
-            <span class="badge bg-success ms-2">20%</span>
-          </span>
-          <button class="btn btn-sm btn-danger">
-            <i class="bi bi-x-circle"></i> <!-- Bootstrap Icon -->
-          </button>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span class="flex-grow-1">Ropa</span>
-          <span class="d-flex align-items-center mx-3">
-            <span class="text-danger">- $200.00</span>
-            <span class="badge bg-success ms-2">4%</span>
-          </span>
-          <button class="btn btn-sm btn-danger">
-            <i class="bi bi-x-circle"></i> <!-- Bootstrap Icon -->
-          </button>
-        </li>
-      </ul>
+      <app-egreso />
     </div>
   </div>
 
